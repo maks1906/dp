@@ -26,7 +26,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func sum(a, b int) int {
-	return a + b
+	return a + b*2
 }
 
 func main() {
