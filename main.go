@@ -2,7 +2,6 @@ package main
 
 // некоторые импорты нужны для проверки
 import (
-	"fmt"
 	"net/http" // пакет для поддержки HTTP протокола
 	"strconv"
 )
@@ -26,11 +25,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func main() {
-	http.HandleFunc("/count", handler)
+func sum(a, b int) int {
+	return a + b
+}
 
-	err := http.ListenAndServe(":3333", nil)
-	if err != nil {
-		fmt.Println("Ошибка запуска сервера:", err)
-	}
+func main() {
+
 }
